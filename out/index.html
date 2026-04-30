@@ -1,0 +1,291 @@
+<!DOCTYPE html><html lang="en" class="__variable_49a339 __variable_37ef13"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="preload" href="/_next/static/media/36966cca54120369-s.p.woff2" as="font" crossorigin="" type="font/woff2"/><link rel="preload" href="/_next/static/media/e4af272ccee01ff0-s.p.woff2" as="font" crossorigin="" type="font/woff2"/><link rel="stylesheet" href="/_next/static/css/2475a54db6584449.css" data-precedence="next"/><link rel="preload" as="script" fetchPriority="low" href="/_next/static/chunks/webpack-9702822faa54212f.js"/><script src="/_next/static/chunks/fd9d1056-49ca28257eb7a92c.js" async=""></script><script src="/_next/static/chunks/117-8db81c3126b3333a.js" async=""></script><script src="/_next/static/chunks/main-app-b9a4eed14026a430.js" async=""></script><script src="/_next/static/chunks/app/page-3e7ebab58ca2a4c7.js" async=""></script><title>VOLT Rowing Studio — Chicago | Row. Push. Transform.</title><meta name="description" content="Data-driven rowing studio in Chicago. Full-body erg intervals and strength work. 24 machines, 10 elite coaches."/><meta name="next-size-adjust"/><script src="/_next/static/chunks/polyfills-42372ed130431b0a.js" noModule=""></script></head><body><style>
+  :root {
+    --vl-bg: #0A1628;
+    --vl-surface: #0E1E36;
+    --vl-card: #12243E;
+    --vl-primary: #00D4FF;
+    --vl-primary-dark: #00A8CC;
+    --vl-accent: #7FFFFF;
+    --vl-text: #E8F4FF;
+    --vl-muted: rgba(232,244,255,0.5);
+    --vl-border: rgba(0,212,255,0.12);
+    --font-display: var(--font-space-grotesk), 'Space Grotesk', sans-serif;
+    --font-body: var(--font-inter), 'Inter', sans-serif;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--font-body); background: var(--vl-bg); color: var(--vl-text); overflow-x: hidden; }
+
+  /* NAV */
+  .vl-nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 3rem; height: 64px;
+    transition: background 0.3s, box-shadow 0.3s;
+  }
+  .vl-nav.scrolled {
+    background: rgba(10,22,40,0.97);
+    box-shadow: 0 1px 24px rgba(0,0,0,0.5);
+    backdrop-filter: blur(12px);
+  }
+  .vl-nav-logo {
+    font-family: var(--font-display);
+    font-size: 1.8rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase;
+    color: var(--vl-text); text-decoration: none;
+  }
+  .vl-nav-logo span { color: var(--vl-primary); }
+  .vl-nav-links { display: flex; gap: 2rem; align-items: center; }
+  .vl-nav-links a {
+    font-size: 0.85rem; font-weight: 500; letter-spacing: 0.04em;
+    color: var(--vl-muted); text-decoration: none; transition: color 0.2s;
+  }
+  .vl-nav-links a:hover { color: var(--vl-primary); }
+  .vl-btn-nav {
+    background: var(--vl-primary); color: #0A1628;
+    padding: 0.5rem 1.4rem; border-radius: 2px;
+    font-size: 0.82rem; font-weight: 700; letter-spacing: 0.06em;
+    text-decoration: none; transition: background 0.2s;
+  }
+  .vl-btn-nav:hover { background: var(--vl-accent); }
+
+  /* ===== INSET/CARD HERO ===== */
+  .vl-hero {
+    min-height: 100vh; position: relative;
+    display: flex; align-items: center; overflow: hidden;
+  }
+  .vl-hero-bg {
+    position: absolute; inset: 0;
+    background-image: url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=1800&q=80');
+    background-size: cover; background-position: center;
+    filter: brightness(0.18) saturate(0.5);
+  }
+  .vl-hero-bg-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(135deg, rgba(10,22,40,0.6) 0%, rgba(0,212,255,0.06) 100%);
+  }
+  .vl-hero-inner {
+    position: relative; z-index: 2;
+    max-width: 1200px; margin: 0 auto; padding: 8rem 3rem 5rem;
+    display: grid; grid-template-columns: 1fr 420px; gap: 5rem; align-items: center;
+  }
+  .vl-hero-copy {}
+  .vl-hero-tag {
+    display: inline-flex; align-items: center; gap: 0.6rem;
+    font-size: 0.78rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--vl-primary); margin-bottom: 1.5rem;
+  }
+  .vl-hero-tag-line { width: 20px; height: 1.5px; background: var(--vl-primary); }
+  .vl-hero-title {
+    font-family: var(--font-display);
+    font-size: clamp(3.5rem, 5.5vw, 6.5rem);
+    font-weight: 700; line-height: 0.95; letter-spacing: -0.02em;
+    color: var(--vl-text); margin-bottom: 1.5rem;
+  }
+  .vl-hero-title em { font-style: normal; color: var(--vl-primary); }
+  .vl-hero-sub { font-size: 1rem; line-height: 1.75; color: var(--vl-muted); max-width: 420px; margin-bottom: 2.5rem; }
+  .vl-hero-actions { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 3rem; }
+  .vl-btn-primary {
+    background: var(--vl-primary); color: #0A1628;
+    padding: 0.9rem 2rem;
+    font-weight: 700; font-size: 0.9rem; letter-spacing: 0.06em;
+    text-decoration: none; transition: background 0.2s, transform 0.2s;
+  }
+  .vl-btn-primary:hover { background: var(--vl-accent); transform: translateY(-2px); }
+  .vl-btn-ghost {
+    border: 1.5px solid rgba(232,244,255,0.15); color: var(--vl-muted);
+    padding: 0.9rem 2rem;
+    font-weight: 500; font-size: 0.9rem; letter-spacing: 0.04em;
+    text-decoration: none; transition: border-color 0.2s, color 0.2s;
+  }
+  .vl-btn-ghost:hover { border-color: var(--vl-primary); color: var(--vl-primary); }
+
+  /* Stats below copy */
+  .vl-hero-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; padding-top: 2rem; border-top: 1px solid rgba(232,244,255,0.07); }
+  .vl-hs-value { font-family: var(--font-display); font-size: 1.6rem; font-weight: 700; color: var(--vl-primary); margin-bottom: 0.2rem; }
+  .vl-hs-label { font-size: 0.68rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--vl-muted); }
+
+  /* INSET VIDEO CARD — Volt style */
+  .vl-video-card {
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 0 0 1px rgba(0,212,255,0.15), 0 32px 80px rgba(0,0,0,0.5), 0 0 60px rgba(0,212,255,0.06);
+    aspect-ratio: 9/16;
+    max-height: 540px;
+    position: relative;
+    background: var(--vl-card);
+  }
+  .vl-video-card video { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .vl-video-card-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(to top, rgba(10,22,40,0.7) 0%, transparent 40%);
+  }
+  .vl-video-card-bottom {
+    position: absolute; bottom: 0; left: 0; right: 0; padding: 1.25rem 1.5rem;
+  }
+  .vl-video-card-label {
+    display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.35rem;
+  }
+  .vl-video-card-dot {
+    width: 6px; height: 6px; border-radius: 50%; background: var(--vl-primary);
+    box-shadow: 0 0 6px var(--vl-primary);
+    animation: vl-pulse 2s infinite;
+  }
+  @keyframes vl-pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
+  .vl-video-card-name {
+    font-family: var(--font-display);
+    font-size: 0.9rem; font-weight: 600; letter-spacing: 0.06em;
+    color: var(--vl-primary);
+  }
+  .vl-video-card-sub {
+    font-size: 0.75rem; color: rgba(232,244,255,0.55); letter-spacing: 0.04em;
+  }
+  /* Cyan glow border effect */
+  .vl-video-card::before {
+    content: ''; position: absolute; inset: 0; border-radius: 6px;
+    border: 1.5px solid rgba(0,212,255,0.25); pointer-events: none; z-index: 2;
+  }
+
+  /* SECTIONS */
+  section { padding: 6rem 2rem; }
+  .vl-section-tag {
+    font-size: 0.78rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--vl-primary); margin-bottom: 0.5rem; display: inline-block;
+  }
+  .vl-section-title {
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 4vw, 3.8rem);
+    font-weight: 700; letter-spacing: -0.02em; line-height: 1;
+    color: var(--vl-text); margin-bottom: 1rem;
+  }
+  .vl-section-sub { font-size: 1rem; line-height: 1.75; color: var(--vl-muted); max-width: 520px; }
+
+  /* PILLARS */
+  .vl-pillars-section { background: var(--vl-surface); }
+  .vl-pillars-inner { max-width: 1200px; margin: 0 auto; }
+  .vl-pillars-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3rem; flex-wrap: wrap; gap: 2rem; }
+  .vl-pillars-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--vl-border); border: 1px solid var(--vl-border); }
+  .vl-pillar-cell { background: var(--vl-card); padding: 2.5rem 1.75rem; transition: background 0.2s; }
+  .vl-pillar-cell:hover { background: #162A46; }
+  .vl-pillar-icon { font-size: 1.8rem; margin-bottom: 1rem; }
+  .vl-pillar-name {
+    font-family: var(--font-display);
+    font-size: 1.1rem; font-weight: 700; letter-spacing: 0.02em;
+    color: var(--vl-text); margin-bottom: 0.6rem;
+  }
+  .vl-pillar-desc { font-size: 0.88rem; line-height: 1.65; color: var(--vl-muted); }
+
+  /* CLASSES */
+  .vl-classes-section { background: var(--vl-bg); }
+  .vl-classes-inner { max-width: 1200px; margin: 0 auto; }
+  .vl-classes-header { margin-bottom: 3rem; }
+  .vl-classes-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--vl-border); border: 1px solid var(--vl-border); }
+  .vl-class-cell { background: var(--vl-card); padding: 2rem; transition: background 0.2s; position: relative; overflow: hidden; }
+  .vl-class-cell:hover { background: #14263E; }
+  .vl-class-cell::after {
+    content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px;
+    background: var(--vl-primary); transform: scaleX(0); transform-origin: left; transition: transform 0.3s;
+  }
+  .vl-class-cell:hover::after { transform: scaleX(1); }
+  .vl-class-badges { display: flex; gap: 0.5rem; margin-bottom: 1rem; }
+  .vl-badge { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.25rem 0.65rem; }
+  .vl-badge-level { background: rgba(0,212,255,0.1); color: var(--vl-primary); }
+  .vl-badge-dur { background: rgba(232,244,255,0.06); color: var(--vl-muted); }
+  .vl-class-name {
+    font-family: var(--font-display);
+    font-size: 1.15rem; font-weight: 700; letter-spacing: 0.02em;
+    color: var(--vl-text); margin-bottom: 0.75rem;
+  }
+  .vl-class-desc { font-size: 0.88rem; line-height: 1.65; color: var(--vl-muted); }
+
+  /* PRICING */
+  .vl-pricing-section { background: var(--vl-surface); }
+  .vl-pricing-inner { max-width: 1100px; margin: 0 auto; }
+  .vl-pricing-header { text-align: center; margin-bottom: 3.5rem; }
+  .vl-pricing-header .vl-section-sub { margin: 0 auto; }
+  .vl-pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--vl-border); border: 1px solid var(--vl-border); }
+  .vl-price-card { background: var(--vl-card); padding: 2.5rem 2rem; position: relative; }
+  .vl-price-card.highlight { background: #0B1E38; box-shadow: inset 0 0 0 1.5px rgba(0,212,255,0.25); }
+  .vl-popular-badge {
+    position: absolute; top: 0; left: 0; right: 0;
+    background: var(--vl-primary);
+    font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+    color: #0A1628; text-align: center; padding: 0.3rem;
+  }
+  .vl-price-name {
+    font-family: var(--font-display);
+    font-size: 0.95rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em;
+    color: var(--vl-muted); margin-bottom: 0.75rem; margin-top: 0.5rem;
+  }
+  .vl-price-card.highlight .vl-price-name { margin-top: 2.2rem; }
+  .vl-price-amount { font-family: var(--font-display); font-size: 3rem; font-weight: 700; color: var(--vl-primary); line-height: 1; margin-bottom: 0.2rem; }
+  .vl-price-period { font-size: 0.8rem; color: var(--vl-muted); margin-bottom: 1.75rem; }
+  .vl-price-features { list-style: none; display: flex; flex-direction: column; gap: 0.7rem; margin-bottom: 2rem; }
+  .vl-price-features li { display: flex; align-items: flex-start; gap: 0.6rem; font-size: 0.88rem; color: var(--vl-muted); }
+  .vl-check { color: var(--vl-primary); flex-shrink: 0; font-weight: 700; }
+  .vl-price-cta {
+    display: block; text-align: center; padding: 0.9rem;
+    font-weight: 700; font-size: 0.88rem; letter-spacing: 0.08em; text-transform: uppercase;
+    text-decoration: none; transition: all 0.2s;
+  }
+  .vl-price-card.highlight .vl-price-cta { background: var(--vl-primary); color: #0A1628; }
+  .vl-price-card.highlight .vl-price-cta:hover { background: var(--vl-accent); }
+  .vl-price-card:not(.highlight) .vl-price-cta { border: 1px solid rgba(232,244,255,0.1); color: var(--vl-muted); }
+  .vl-price-card:not(.highlight) .vl-price-cta:hover { border-color: var(--vl-primary); color: var(--vl-primary); }
+
+  /* CTA */
+  .vl-cta-section { background: var(--vl-bg); text-align: center; padding: 7rem 2rem; position: relative; overflow: hidden; }
+  .vl-cta-section::before {
+    content: ''; position: absolute; inset: 0;
+    background: radial-gradient(ellipse 60% 50% at 50% 50%, rgba(0,212,255,0.07) 0%, transparent 100%);
+  }
+  .vl-cta-inner { max-width: 580px; margin: 0 auto; position: relative; }
+  .vl-cta-title {
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 6vw, 6.5rem);
+    font-weight: 700; letter-spacing: -0.02em; line-height: 0.95;
+    color: var(--vl-text); margin-bottom: 1.25rem;
+  }
+  .vl-cta-title span { color: var(--vl-primary); }
+  .vl-cta-sub { font-size: 1rem; color: var(--vl-muted); margin-bottom: 2.5rem; line-height: 1.75; }
+  .vl-btn-cta {
+    background: var(--vl-primary); color: #0A1628;
+    padding: 1.1rem 3rem;
+    font-weight: 700; font-size: 0.95rem; letter-spacing: 0.06em;
+    text-decoration: none; display: inline-block;
+    transition: background 0.2s, transform 0.2s;
+  }
+  .vl-btn-cta:hover { background: var(--vl-accent); transform: translateY(-2px); }
+
+  /* FOOTER */
+  .vl-footer { background: #060F1C; padding: 4rem 2rem 2rem; }
+  .vl-footer-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; }
+  .vl-footer-logo { font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; letter-spacing: 0.05em; color: var(--vl-text); margin-bottom: 0.75rem; }
+  .vl-footer-logo span { color: var(--vl-primary); }
+  .vl-footer-desc { font-size: 0.88rem; line-height: 1.6; color: var(--vl-muted); max-width: 280px; }
+  .vl-footer-h { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(232,244,255,0.22); margin-bottom: 1rem; }
+  .vl-footer-links { list-style: none; display: flex; flex-direction: column; gap: 0.65rem; }
+  .vl-footer-links a { color: var(--vl-muted); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+  .vl-footer-links a:hover { color: var(--vl-primary); }
+  .vl-footer-bottom {
+    max-width: 1200px; margin: 2.5rem auto 0;
+    padding-top: 2rem; border-top: 1px solid rgba(232,244,255,0.06);
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 0.78rem; color: var(--vl-muted); flex-wrap: wrap; gap: 0.5rem;
+  }
+  .vl-footer-brand { color: var(--vl-primary); text-decoration: none; font-weight: 700; }
+
+  /* REVEAL */
+  .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.65s ease, transform 0.65s ease; }
+  .reveal.visible { opacity: 1; transform: none; }
+
+  @media (max-width: 900px) {
+    .vl-hero-inner { grid-template-columns: 1fr; }
+    .vl-video-card { max-height: 240px; aspect-ratio: 16/9; }
+    .vl-hero-stats { grid-template-columns: repeat(2, 1fr); }
+    .vl-pillars-grid { grid-template-columns: repeat(2, 1fr); }
+    .vl-classes-grid { grid-template-columns: 1fr; }
+    .vl-pricing-grid { grid-template-columns: 1fr; }
+    .vl-footer-inner { grid-template-columns: 1fr; }
+    .vl-nav-links { display: none; }
+  }
+</style><nav class="vl-nav"><a href="#" class="vl-nav-logo"><span>VOLT</span> Rowing</a><div class="vl-nav-links"><a href="#classes">Classes</a><a href="#pillars">Method</a><a href="#pricing">Pricing</a><a href="#contact">Contact</a><a href="#first" class="vl-btn-nav">First Row Free</a></div></nav><section id="first" class="vl-hero"><div class="vl-hero-bg"></div><div class="vl-hero-bg-overlay"></div><div class="vl-hero-inner"><div class="vl-hero-copy"><div class="vl-hero-tag"><span class="vl-hero-tag-line"></span>Chicago, IL — Studio Row</div><h1 class="vl-hero-title">Row<br/>Stronger.<br/><em>Row VOLT.</em></h1><p class="vl-hero-sub">Data-driven erg training combined with full-body strength work. 24 machines, real-time split tracking, and coaches who know the difference between effort and output.</p><div class="vl-hero-actions"><a href="#pricing" class="vl-btn-primary">First Row Free</a><a href="#classes" class="vl-btn-ghost">View Classes</a></div><div class="vl-hero-stats"><div><div class="vl-hs-value">380+</div><div class="vl-hs-label">Active Rowers</div></div><div><div class="vl-hs-value">24</div><div class="vl-hs-label">Erg Machines</div></div><div><div class="vl-hs-value">50min</div><div class="vl-hs-label">Power Row</div></div><div><div class="vl-hs-value">10</div><div class="vl-hs-label">Elite Coaches</div></div></div></div><div class="vl-video-card"><video autoPlay="" muted="" loop="" playsInline="" poster="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=800&amp;q=80"><source src="https://assets.mixkit.co/videos/preview/mixkit-athlete-rowing-in-a-gym-machine-39988-large.mp4" type="video/mp4"/></video><div class="vl-video-card-overlay"></div><div class="vl-video-card-bottom"><div class="vl-video-card-label"><span class="vl-video-card-dot"></span><span class="vl-video-card-name">Power Row</span></div><div class="vl-video-card-sub">50 min · All Levels · Erg + Floor</div></div></div></div></section><section id="pillars" class="vl-pillars-section"><div class="vl-pillars-inner"><div class="vl-pillars-header reveal"><div><span class="vl-section-tag">The VOLT Method</span><h2 class="vl-section-title">Four<br/>Principles</h2></div><p class="vl-section-sub">We built VOLT on the belief that rowing is the most complete full-body workout available — and that most people have never been taught to do it properly.</p></div><div class="vl-pillars-grid"><div class="vl-pillar-cell reveal" style="transition-delay:0ms"><div class="vl-pillar-icon">🚣</div><div class="vl-pillar-name">Stroke Power</div><p class="vl-pillar-desc">Every stroke is a full-body movement. We coach the drive, catch, finish, and recovery — because form determines output.</p></div><div class="vl-pillar-cell reveal" style="transition-delay:80ms"><div class="vl-pillar-icon">📊</div><div class="vl-pillar-name">Data-Driven</div><p class="vl-pillar-desc">Split times, stroke rate, and watts displayed in real time. VOLT athletes row with intent, not just effort.</p></div><div class="vl-pillar-cell reveal" style="transition-delay:160ms"><div class="vl-pillar-icon">🔁</div><div class="vl-pillar-name">Interval Science</div><p class="vl-pillar-desc">Work-to-rest ratios designed around the rowing stroke. Our programming is built on exercise physiology, not guesswork.</p></div><div class="vl-pillar-cell reveal" style="transition-delay:240ms"><div class="vl-pillar-icon">🧠</div><div class="vl-pillar-name">Mental Edge</div><p class="vl-pillar-desc">Rowing requires sustained focus. Our coaches train the mental side as deliberately as the physical one.</p></div></div></div></section><section id="classes" class="vl-classes-section"><div class="vl-classes-inner"><div class="vl-classes-header reveal"><span class="vl-section-tag">Class Formats</span><h2 class="vl-section-title">Every Stroke<br/>Counts</h2><p class="vl-section-sub">Six class formats built for every experience level. Whether you&#x27;re touching a Concept2 for the first time or chasing a new 2k PR — VOLT has a class for it.</p></div><div class="vl-classes-grid"><div class="vl-class-cell reveal" style="transition-delay:0ms"><div class="vl-class-badges"><span class="vl-badge vl-badge-level">All Levels</span><span class="vl-badge vl-badge-dur">50 min</span></div><div class="vl-class-name">Power Row</div><p class="vl-class-desc">The flagship VOLT class. Alternating rowing intervals with floor-based strength work. Expect to be challenged from the first pull.</p></div><div class="vl-class-cell reveal" style="transition-delay:60ms"><div class="vl-class-badges"><span class="vl-badge vl-badge-level">Beginner</span><span class="vl-badge vl-badge-dur">45 min</span></div><div class="vl-class-name">Erg 101</div><p class="vl-class-desc">Learn proper rowing technique on the Concept2 erg. Stroke mechanics, breathing, and pacing — the foundation for everything at VOLT.</p></div><div class="vl-class-cell reveal" style="transition-delay:120ms"><div class="vl-class-badges"><span class="vl-badge vl-badge-level">Intermediate</span><span class="vl-badge vl-badge-dur">45 min</span></div><div class="vl-class-name">Sprint Series</div><p class="vl-class-desc">Short, high-intensity intervals at maximum effort. 20 strokes on, controlled rest. Designed to improve stroke power and anaerobic capacity.</p></div><div class="vl-class-cell reveal" style="transition-delay:180ms"><div class="vl-class-badges"><span class="vl-badge vl-badge-level">Intermediate+</span><span class="vl-badge vl-badge-dur">60 min</span></div><div class="vl-class-name">Endurance Row</div><p class="vl-class-desc">Sustained aerobic rowing at a controlled pace. Builds base fitness, improves stroke efficiency, and develops true cardiovascular endurance.</p></div><div class="vl-class-cell reveal" style="transition-delay:240ms"><div class="vl-class-badges"><span class="vl-badge vl-badge-level">Advanced</span><span class="vl-badge vl-badge-dur">55 min</span></div><div class="vl-class-name">Strength + Erg</div><p class="vl-class-desc">Compound barbell and dumbbell movements combined with rowing intervals. For athletes who want to build strength alongside endurance.</p></div><div class="vl-class-cell reveal" style="transition-delay:300ms"><div class="vl-class-badges"><span class="vl-badge vl-badge-level">All Levels</span><span class="vl-badge vl-badge-dur">30 min</span></div><div class="vl-class-name">Recovery Row</div><p class="vl-class-desc">Low-rate steady-state rowing for active recovery. Keeps the blood moving and maintains stroke technique on rest days.</p></div></div></div></section><section id="pricing" class="vl-pricing-section"><div class="vl-pricing-inner"><div class="vl-pricing-header reveal"><span class="vl-section-tag">Membership</span><h2 class="vl-section-title">Train<br/>With VOLT</h2><p class="vl-section-sub">Your first class is free. No pressure — come in, feel the machine, and decide from there.</p></div><div class="vl-pricing-grid"><div class="vl-price-card reveal" style="transition-delay:0ms"><div class="vl-price-name">Drop-In</div><div class="vl-price-amount">$32</div><div class="vl-price-period">per class</div><ul class="vl-price-features"><li><span class="vl-check">✓</span>Single class access</li><li><span class="vl-check">✓</span>Erg + monitor included</li><li><span class="vl-check">✓</span>Any class format</li><li><span class="vl-check">✓</span>Book 5 days ahead</li></ul><a href="#first" class="vl-price-cta">Get Started</a></div><div class="vl-price-card reveal highlight" style="transition-delay:100ms"><span class="vl-popular-badge">Best Value</span><div class="vl-price-name">10-Class Pack</div><div class="vl-price-amount">$270</div><div class="vl-price-period">$27 per class · 90 days to use</div><ul class="vl-price-features"><li><span class="vl-check">✓</span>10 classes, any type</li><li><span class="vl-check">✓</span>Priority booking (72hr)</li><li><span class="vl-check">✓</span>Free Erg 101 included</li><li><span class="vl-check">✓</span>Rollover 1 unused class</li><li><span class="vl-check">✓</span>90-day expiry</li></ul><a href="#first" class="vl-price-cta">Get Started</a></div><div class="vl-price-card reveal" style="transition-delay:200ms"><div class="vl-price-name">Unlimited</div><div class="vl-price-amount">$179</div><div class="vl-price-period">per month · cancel anytime</div><ul class="vl-price-features"><li><span class="vl-check">✓</span>Unlimited classes</li><li><span class="vl-check">✓</span>Early booking (96hr)</li><li><span class="vl-check">✓</span>Monthly split review</li><li><span class="vl-check">✓</span>1 guest pass per month</li></ul><a href="#first" class="vl-price-cta">Get Started</a></div></div></div></section><section class="vl-cta-section"><div class="vl-cta-inner"><h2 class="vl-cta-title reveal">Take the<br/><span>First Pull.</span></h2><p class="vl-cta-sub reveal">Book your free intro class. Bring nothing except willingness to learn — we&#x27;ll handle the rest.</p><a href="#first" class="vl-btn-cta reveal">Book Free Class</a></div></section><footer id="contact" class="vl-footer"><div class="vl-footer-inner"><div><div class="vl-footer-logo"><span>VOLT</span> Rowing</div><p class="vl-footer-desc">850 N Michigan Ave, Chicago, IL 60611<br/>(312) 555-0147<br/>hello@voltrowing.com</p></div><div><div class="vl-footer-h">Train</div><ul class="vl-footer-links"><li><a href="#classes">Schedule</a></li><li><a href="#pillars">Our Method</a></li><li><a href="#pricing">Pricing</a></li><li><a href="#">Private Training</a></li></ul></div><div><div class="vl-footer-h">Studio</div><ul class="vl-footer-links"><li><a href="#">First Visit</a></li><li><a href="#">Our Coaches</a></li><li><a href="#">FAQ</a></li><li><a href="#">Privacy Policy</a></li></ul></div></div><div class="vl-footer-bottom"><span>© <!-- -->2026<!-- --> VOLT Rowing. All rights reserved.</span><span>Powered by <a href="https://koriva.com" class="vl-footer-brand">Koriva</a></span></div></footer><script src="/_next/static/chunks/webpack-9702822faa54212f.js" async=""></script><script>(self.__next_f=self.__next_f||[]).push([0]);self.__next_f.push([2,null])</script><script>self.__next_f.push([1,"1:HL[\"/_next/static/media/36966cca54120369-s.p.woff2\",\"font\",{\"crossOrigin\":\"\",\"type\":\"font/woff2\"}]\n2:HL[\"/_next/static/media/e4af272ccee01ff0-s.p.woff2\",\"font\",{\"crossOrigin\":\"\",\"type\":\"font/woff2\"}]\n3:HL[\"/_next/static/css/2475a54db6584449.css\",\"style\"]\n"])</script><script>self.__next_f.push([1,"4:I[2846,[],\"\"]\n6:I[9107,[],\"ClientPageRoot\"]\n7:I[552,[\"931\",\"static/chunks/app/page-3e7ebab58ca2a4c7.js\"],\"default\",1]\n8:I[4707,[],\"\"]\n9:I[6423,[],\"\"]\nb:I[1060,[],\"\"]\nc:[]\n"])</script><script>self.__next_f.push([1,"0:[\"$\",\"$L4\",null,{\"buildId\":\"AbMiGH2C3fW7QbzsNkHva\",\"assetPrefix\":\"\",\"urlParts\":[\"\",\"\"],\"initialTree\":[\"\",{\"children\":[\"__PAGE__\",{}]},\"$undefined\",\"$undefined\",true],\"initialSeedData\":[\"\",{\"children\":[\"__PAGE__\",{},[[\"$L5\",[\"$\",\"$L6\",null,{\"props\":{\"params\":{},\"searchParams\":{}},\"Component\":\"$7\"}],null],null],null]},[[[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/css/2475a54db6584449.css\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\"}]],[\"$\",\"html\",null,{\"lang\":\"en\",\"className\":\"__variable_49a339 __variable_37ef13\",\"children\":[\"$\",\"body\",null,{\"children\":[\"$\",\"$L8\",null,{\"parallelRouterKey\":\"children\",\"segmentPath\":[\"children\"],\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L9\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":[[\"$\",\"title\",null,{\"children\":\"404: This page could not be found.\"}],[\"$\",\"div\",null,{\"style\":{\"fontFamily\":\"system-ui,\\\"Segoe UI\\\",Roboto,Helvetica,Arial,sans-serif,\\\"Apple Color Emoji\\\",\\\"Segoe UI Emoji\\\"\",\"height\":\"100vh\",\"textAlign\":\"center\",\"display\":\"flex\",\"flexDirection\":\"column\",\"alignItems\":\"center\",\"justifyContent\":\"center\"},\"children\":[\"$\",\"div\",null,{\"children\":[[\"$\",\"style\",null,{\"dangerouslySetInnerHTML\":{\"__html\":\"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}\"}}],[\"$\",\"h1\",null,{\"className\":\"next-error-h1\",\"style\":{\"display\":\"inline-block\",\"margin\":\"0 20px 0 0\",\"padding\":\"0 23px 0 0\",\"fontSize\":24,\"fontWeight\":500,\"verticalAlign\":\"top\",\"lineHeight\":\"49px\"},\"children\":\"404\"}],[\"$\",\"div\",null,{\"style\":{\"display\":\"inline-block\"},\"children\":[\"$\",\"h2\",null,{\"style\":{\"fontSize\":14,\"fontWeight\":400,\"lineHeight\":\"49px\",\"margin\":0},\"children\":\"This page could not be found.\"}]}]]}]}]],\"notFoundStyles\":[]}]}]}]],null],null],\"couldBeIntercepted\":false,\"initialHead\":[null,\"$La\"],\"globalErrorComponent\":\"$b\",\"missingSlots\":\"$Wc\"}]\n"])</script><script>self.__next_f.push([1,"a:[[\"$\",\"meta\",\"0\",{\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1\"}],[\"$\",\"meta\",\"1\",{\"charSet\":\"utf-8\"}],[\"$\",\"title\",\"2\",{\"children\":\"VOLT Rowing Studio — Chicago | Row. Push. Transform.\"}],[\"$\",\"meta\",\"3\",{\"name\":\"description\",\"content\":\"Data-driven rowing studio in Chicago. Full-body erg intervals and strength work. 24 machines, 10 elite coaches.\"}],[\"$\",\"meta\",\"4\",{\"name\":\"next-size-adjust\"}]]\n5:null\n"])</script></body></html>
