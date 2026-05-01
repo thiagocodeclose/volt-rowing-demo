@@ -2,6 +2,7 @@
 import type { Metadata } from 'next';
 import { Space_Grotesk, Inter } from 'next/font/google';
 import './globals.css';
+import { getKorivaConfig, buildCssVars } from '@/lib/koriva-config';
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
@@ -20,9 +21,11 @@ export const metadata: Metadata = {
   description: 'Data-driven rowing studio in Chicago. Full-body erg intervals and strength work. 24 machines, 10 elite coaches.',
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  const cfg = await getKorivaConfig();
+  const vars = buildCssVars(cfg?.brand);
   return (
-    <html lang="en" className={`${spaceGrotesk.variable} ${inter.variable}`}>
+    <html lang="en" className={`${spaceGrotesk.variable} ${inter.variable}`} style={vars as React.CSSProperties}>
       <body>{children}</body>
     </html>
   );
