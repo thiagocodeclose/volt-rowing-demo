@@ -339,18 +339,18 @@ export default function VoltPage() {
         <div className="vl-hero-inner">
           <div className="vl-hero-copy">
             <div className="vl-hero-tag">
-              <span className="vl-hero-tag-line" />
+              <span data-cg-el="hero_eyebrow" className="vl-hero-tag-line" />
               Chicago, IL — Studio Row
             </div>
             <h1 data-cg-el="hero_headline_1" className="vl-hero-title">
               Row<br />Stronger.<br /><em>Row VOLT.</em>
             </h1>
-            <p className="vl-hero-sub">
+            <p data-cg-el="hero_subtitle" className="vl-hero-sub">
               Data-driven erg training combined with full-body strength work. 24 machines, real-time split tracking, and coaches who know the difference between effort and output.
             </p>
             <div className="vl-hero-actions">
-              <a href="#pricing" className="vl-btn-primary">First Row Free</a>
-              <a href="#classes" className="vl-btn-ghost">View Classes</a>
+              <a data-cg-el="hero_cta_primary" href="#pricing" className="vl-btn-primary">First Row Free</a>
+              <a data-cg-el="hero_cta_secondary" href="#classes" className="vl-btn-ghost">View Classes</a>
             </div>
             <div className="vl-hero-stats">
               {siteData.stats.map((s) => (
