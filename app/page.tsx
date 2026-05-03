@@ -342,7 +342,7 @@ export default function VoltPage() {
               <span className="vl-hero-tag-line" />
               Chicago, IL — Studio Row
             </div>
-            <h1 className="vl-hero-title">
+            <h1 data-cg-el="hero_headline_1" className="vl-hero-title">
               Row<br />Stronger.<br /><em>Row VOLT.</em>
             </h1>
             <p className="vl-hero-sub">
